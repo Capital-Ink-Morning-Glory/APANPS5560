@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Enter an English query word:</h1>
+    <form action="/embed" method="POST">
+        <input type="text" name="query_word">
+        <input type="submit" name="ui" value="Send">
+    </form>
+    {% if embedding %}
+        <p>Query word: {{word}}</p>
+        <p>Embedding: {{embedding}}</p>
+    {% endif %}
+</body>
+</html>
